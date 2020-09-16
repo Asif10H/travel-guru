@@ -1,0 +1,18 @@
+div{
+    font-family:'Montserrat';
+    font-weight:bold;
+    background-size:cover;
+}
+.travel-guru-logo{
+    height:50px;
+    width:100px;
+}
+.navbar{
+    margin-bottom:100px;
+    color:white;
+}
+.place-cards{
+    border-radius:10px;
+    width:300px;
+    height:200px;
+}
