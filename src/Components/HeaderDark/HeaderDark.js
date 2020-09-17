@@ -1,11 +1,13 @@
-import React from 'react';
-import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import Logo from '../../Logo.png';
 import './HeaderDark.css'
 
 
 const HeaderDark = () => {
+    const[loggedInUser,setLoggedInUser] = useContext(UserContext)
     return (
         <div className="header-nav" >
         <Navbar className="navbar home-nav " bg="transparent" expand="lg">
@@ -21,7 +23,10 @@ const HeaderDark = () => {
             </Nav>
             <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                {loggedInUser.email?  <Nav.Link style={{color: 'white'}} href="#link">{loggedInUser.name}</Nav.Link>:
                 <Link to='/login'><button> Log In</button></Link>
+            }
+                
             </Form>
         </Navbar.Collapse>
     </Navbar>

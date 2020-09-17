@@ -7,7 +7,6 @@ import { UserContext } from '../../App';
 
 const HeaderLight = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
-    console.log(loggedInUser);
     return (
         <div className='header-light-nav'>
         <Navbar className="navbar" bg="transparent" expand="lg">
@@ -19,7 +18,7 @@ const HeaderLight = () => {
             <Nav.Link href="#link">Destination</Nav.Link>
             <Nav.Link href="#link">Blog</Nav.Link>
             <Nav.Link href="#link">Contact</Nav.Link>
-            <Nav.Link href="#link">{loggedInUser.name}</Nav.Link>
+            <Nav.Link href="#link">User Email : {loggedInUser.email}</Nav.Link>
 
             </Nav>
         </Navbar.Collapse>

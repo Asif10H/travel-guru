@@ -8,12 +8,12 @@ const Home = () => {
     return (
         <div className="img-fluid" style={{ backgroundImage: `url(${Coxs})` }}>
         <HeaderDark></HeaderDark>
-            <div class="container">
-                <div class="row travel-place-cards">
-                    <div class="col-12">
+            <div className="container">
+                <div className="row travel-place-cards">
+                    <div className="col-12">
                     <h1 style={{color: 'white',textAlign: 'center'}} >Where Do You Want To Go?</h1>
                     {
-                        FakeData.map(plc=><PlaceLink plc={plc}></PlaceLink>)
+                        FakeData.map(plc=><PlaceLink key={plc.key} plc={plc}></PlaceLink>)
                     }
 
                     </div>

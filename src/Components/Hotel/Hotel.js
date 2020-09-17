@@ -4,20 +4,22 @@ import roomOne from '../../Image/roomOne.png'
 import roomTwo from '../../Image/roomTwo.png'
 import roomThree from '../../Image/roomThree.png'
 import HeaderLight from '../HeaderLight/HeaderLight';
-import { PlaceContext } from '../../App';
+// import { PlaceContext } from '../../App';
 import FakeData from '../FakeData/FakeData';
-import Map from '../Map/Map';
+// import Map from '../Map/Map';
 import star from '../../Icon/star.png'
 
 
 
 const Hotel = () => {
-    const [place, setPlace] = useContext(PlaceContext);
+    // const [place, setPlace] = useContext(PlaceContext);
 
-    const placeArray = FakeData.filter(plc => parseInt(plc.key) === parseInt(place))
+    // const placeArray = FakeData.filter(plc => parseInt(plc.key) === parseInt(place))
 
 
+    // {placeArray[0].length && <h1>Book a Room in {placeArray[0].place}</h1>}
 
+    // <Map></Map>
 
 
     return (
@@ -26,7 +28,7 @@ const Hotel = () => {
             <hr></hr>
             <div className="row book-room">
                 <div className="col-6">
-                    <h1>Book a Room in {placeArray[0].place}</h1>
+               
                     <div className="row room-details">
                         <div className="col-6"> <img className="img-fluid" src={roomOne} alt='hotel-room'></img> </div>
                         <div className="col-6"> <div className="book-room-details">
@@ -58,7 +60,7 @@ const Hotel = () => {
                     </div>
                 </div>
                 <div className="col-6">
-                <Map></Map>
+                
 
                 </div>
             </div>

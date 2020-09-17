@@ -10,3 +10,14 @@ button{
     margin-top:10px;
     padding:5px;
 }
+.login-form{
+    border:1px solid black;
+    padding:50px;
+    border-radius:10px;
+}
+
+.toggle{
+    color:blue;
+    text-decoration:underline;
+    cursor: pointer;
+}
