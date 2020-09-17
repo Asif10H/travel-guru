@@ -7,6 +7,7 @@ import HeaderLight from '../HeaderLight/HeaderLight';
 import { PlaceContext } from '../../App';
 import FakeData from '../FakeData/FakeData';
 import Map from '../Map/Map';
+import star from '../../Icon/star.png'
 
 
 
@@ -32,6 +33,7 @@ const Hotel = () => {
                             <p>4 Guests 2 Bedrooms 2 Beds 2 Baths</p>
                             <p>Wifi Air Conditioned Kitchen</p>
                             <p>Cancellation Flexibility Available</p>
+                            <p><img src={star} alt='star'></img> 4.9(20) | $34/night</p>
                         </div> </div>
                     </div>
                     <div className="row room-details">
@@ -40,6 +42,8 @@ const Hotel = () => {
                             <p>3 Guests 2 Bedrooms 2 Beds 2 Baths</p>
                             <p>Wifi Air Conditioned Kitchen</p>
                             <p>Cancellation Flexibility Available</p>
+                            <p><img src={star} alt='star'></img> 4.7(70) | $27/night</p>
+
                         </div></div>
                     </div>
                     <div className="row room-details">
@@ -48,6 +52,8 @@ const Hotel = () => {
                             <p>2 Guests 1 Bedrooms 2 Beds 2 Baths</p>
                             <p>Wifi Air Conditioned Kitchen</p>
                             <p>Cancellation Flexibility Available</p>
+                            <p><img src={star} alt='star'></img> 4.8(50) | $22/night</p>
+
                         </div> </div>
                     </div>
                 </div>

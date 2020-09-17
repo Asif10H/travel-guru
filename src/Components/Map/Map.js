@@ -26,7 +26,7 @@ const Map = () => {
           <AnyReactComponent
             lat={parseInt(lattitude)}
             lng={parseInt(longitude)}
-            text="My Marker"
+            text="Here"
           />
         </GoogleMapReact>
       </div>
