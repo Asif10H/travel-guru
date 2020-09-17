@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Form,} from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useLocation, useParams } from 'react-router-dom';
 import FakeData from '../FakeData/FakeData';
 import './Booking.css'
 import HeaderDark from '../HeaderDark/HeaderDark';
 import Time from '../Time/Time';
+import { PlaceContext } from '../../App';
 
 const Booking = () => {
     const { Id } = useParams();
     const select = FakeData.filter(place => parseInt(place.key) === parseInt(Id))
     const bgImage = select[0].image
+
+    const [place,setPlace] = useContext(PlaceContext);
+
+    setPlace(Id);
+
+
     return (
         <div style={{ backgroundImage: `url(${bgImage})` }} >
            <HeaderDark></HeaderDark>

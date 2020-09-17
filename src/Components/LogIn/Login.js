@@ -141,7 +141,6 @@ const SignUp = () => {
         }
 
     }
-    console.log(loggedInUser);
     
     return (
         
