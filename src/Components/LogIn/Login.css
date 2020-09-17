@@ -1,0 +1,12 @@
+.form-card{
+    border:2px solid black;
+    padding:30px;
+    
+}
+button{
+    background-color: #F9A51A;
+    border-radius:10px;
+    border:2px solid #F9A51A;
+    margin-top:10px;
+    padding:5px;
+}

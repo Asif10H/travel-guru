@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Components/Home/Home';
@@ -10,11 +10,18 @@ import {
 } from "react-router-dom";
 import NotFound from './Components/NotFound/NotFound';
 import Booking from './Components/Booking/Booking';
+import Hotel from './Components/Hotel/Hotel';
+import Login from './Components/LogIn/Login';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
+export const UserContext = createContext();
 
-function App() {
+function App(props) {
+  const [loggedInUser,setLoggedInUser] = useState({});
+
   return (
     <div className="App">
+    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
       <Router>
         <Switch>
           <Route path='/home'>
@@ -22,6 +29,12 @@ function App() {
           </Route>
           <Route path='/booking/:Id' >
             <Booking></Booking>
+          </Route>
+          <PrivateRoute path='/hotel'>
+            <Hotel></Hotel>
+          </PrivateRoute>
+          <Route path='/login'>
+          <Login></Login>
           </Route>
           <Route exact path='/'>
             <Home></Home>
@@ -31,6 +44,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      </UserContext.Provider>
 
     </div>
   );

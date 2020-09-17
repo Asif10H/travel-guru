@@ -4,7 +4,7 @@ import './PlaceLink.css';
 
 const PlaceLink = (props) => {
     console.log(props.plc);
-    const imaag = props.plc.image
+    const imaag = props.plc.cardImage
     return (
         <div className='place-body' > 
         <Link to={`/booking/${props.plc.key}`}>
