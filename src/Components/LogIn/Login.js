@@ -7,6 +7,8 @@ import firebaseConfig from './firebase.config';
 import { Form } from 'react-bootstrap';
 import './Login.css'
 import HeaderLight from '../HeaderLight/HeaderLight';
+import google from '../../Icon/google.png'
+import fb from '../../Icon/fb.png'
 
 
 const SignUp = () => {
@@ -171,15 +173,15 @@ const SignUp = () => {
     <input type="password" onBlur={handleBlur} name="password" placeholder="Password" required />
     </div><br/>
     <div className="row justify-content-center">
-    <input type="submit" value={newUser?"Sign Up" : "Login"}/><br/><br/>
+    <input style={{backgroundColor:'#F9A51A',padding:'10px 8px 10px 8px',border:'2px solid #F9A51A'}} type="submit" value={newUser?"Create an account" : "Login"}/> <br/><br/>
     </div><br/><br/>
     <div className="row justify-content-left">
     </div>
     </Form>
     <p style={{color: 'black'}} >{!newUser?"Don't have an account?" : "Already Have an Account?"} <a href="#" onClick={()=> setNewUser(!newUser) } >{!newUser? 'Sign Up' : 'Login'}</a></p>
-    <button onClick={handleGoogleSignIn} >Continue With Google</button><br/><br/>
-            <p style={{textAlign: 'center'}}>Or,</p>
-            <button onClick={handleFbSignIn}>Continue With Facebook</button>
+    <button style={{backgroundColor:'white'}} onClick={handleGoogleSignIn} > <img style={{height:'20px',width:'20px'}} src={google} alt='google' ></img> Continue With Google</button><br/><br/>
+            <p style={{textAlign: 'center'}}>Or,</p><hr/>
+            <button style={{backgroundColor:'white'}} onClick={handleFbSignIn}><img style={{height:'20px',width:'20px'}} src={fb} alt='facebook'></img>  Continue With Facebook</button>
     
     </div>
         </div>

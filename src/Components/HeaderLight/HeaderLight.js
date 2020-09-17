@@ -11,7 +11,7 @@ const HeaderLight = () => {
     return (
         <div className='header-light-nav'>
         <Navbar className="navbar" bg="transparent" expand="lg">
-        <Navbar.Brand href="/home"><img className="travel-guru-logo" src={Logo} alt="travel-guru-logo"></img></Navbar.Brand>
+        <Navbar.Brand href="/home"><img className="travel-guru-logo-light" src={Logo} alt="travel-guru-logo"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

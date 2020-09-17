@@ -9,7 +9,7 @@ const HeaderDark = () => {
     return (
         <div className="header-nav" >
         <Navbar className="navbar home-nav " bg="transparent" expand="lg">
-        <Navbar.Brand style={{backgroundColor: 'white'}} href="/home"><img className="travel-guru-logo" src={Logo} alt="travel-guru-logo"></img></Navbar.Brand>
+        <Navbar.Brand style={{borderRadius:'20px'}} href="/home"><img className="travel-guru-logo" src={Logo} alt="travel-guru-logo"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
