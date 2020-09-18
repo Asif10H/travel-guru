@@ -7,35 +7,37 @@ import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import HeaderLight from '../HeaderLight/HeaderLight';
 import { initializeLoginFrameWork } from './LoginManager';
+import fb from '../../Icon/fb.png'
+import google from '../../Icon/google.png'
 
 
 const Login = () => {
     const [user, setLoggedInUser] = useContext(UserContext)
-    const [haveAccount, setHaveAccount] = useState(false)
+    const [haveAccount, setAccount] = useState(false)
 
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
 
-    // Checks if app already initialized
+    
     initializeLoginFrameWork()
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const fbProvider = new firebase.auth.FacebookAuthProvider();
 
-    // Handles Google Sign In Method
+    
     const handleGoogleSignIn = () => {
         firebase.auth().signInWithPopup(googleProvider)
             .then(result => {
                 const createdUser = result.user;
-                const newUserInfo = { ...user } // Copy an instance of user object
+                const newUserInfo = { ...user } 
                 newUserInfo.name = createdUser.displayName;
                 newUserInfo.email = createdUser.email
-                setLoggedInUser(newUserInfo) // Update the state
-                history.replace(from); // Go to protected route after login
+                setLoggedInUser(newUserInfo) 
+                history.replace(from); 
             })
             .catch(function (error) {
-                const newUserInfo = { ...user } // Copy an instance of user object
+                const newUserInfo = { ...user } 
                 newUserInfo.error = error.message;
                 setLoggedInUser(newUserInfo)
             });
@@ -50,7 +52,7 @@ const Login = () => {
                     newUserInfo.success = "Your account has been created successfully!"
                     newUserInfo.name = `${user.first} ${user.last}`
                     setLoggedInUser(newUserInfo)
-                    updateUserName(`${user.first} ${user.last}`) // Passing the name of the user
+                    updateUserName(`${user.first} ${user.last}`) 
                     verifyEmail()
                     history.replace(from)
                 })
@@ -188,7 +190,7 @@ const Login = () => {
                         {!haveAccount && <TextField required onBlur={handleBlur} autoComplete="off" style={{ marginTop: '33px' }} name='confirmPassword' type='password' id="standard-basic" label="Confirm Password" />}
                         {!haveAccount ? <input type="submit" value="Create an Account" className="submit-btn" /> : <input type="submit" value="Log In" className="submit-btn" />}
                     </form>
-                    <p className='about-account'>{!haveAccount ? "Already have an account?" : "Create An Account"} <span style={{ color: '#F9A51A', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => setHaveAccount(!haveAccount)}>{!haveAccount ? "Login" : "Sign Up"}</span></p>
+                    <p className='about-account'>{!haveAccount ? "Already have an account?" : "Create An Account"} <span style={{ color: '#F9A51A', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => setAccount(!haveAccount)}>{!haveAccount ? "Login" : "Sign Up"}</span></p>
                 </div>
                 {user.error && <p style={{ color: 'red', textAlign: 'center' }}>{user.error}</p>}
                 {user.success && <p style={{ color: 'green', textAlign: 'center' }}>{user.success}</p>}
@@ -197,8 +199,8 @@ const Login = () => {
                     <p style={{ marginTop: '37px', paddingTop: '15px' }}>Or</p>
                     <div style={{ width: '200px', height: '1px', border: '1px solid #AAAAAA', marginTop: '37px' }}></div>
                 </div>
-                <div className='continue-with-facebook' onClick={handleFbSignIn}><p>Continue With Facebook</p></div>
-                <div style={{ marginBottom: '50px' }} onClick={handleGoogleSignIn} className='continue-with-google'><p>Continue With Google</p></div>
+                <div className='continue-with-facebook' onClick={handleFbSignIn}> <img className="google-facebook-logo" src={fb} alt="fb-logo"></img>  <p>Continue With Facebook</p></div>
+                <div style={{ marginBottom: '50px' }} onClick={handleGoogleSignIn} className='continue-with-google'> <img className="google-facebook-logo" src={google} alt="google-logo"></img><p>Continue With Google</p></div>
             </div>
         </div>
     );
