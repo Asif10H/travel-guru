@@ -5,16 +5,16 @@ import FakeData from '../FakeData/FakeData';
 import './Booking.css'
 import HeaderDark from '../HeaderDark/HeaderDark';
 import Time from '../Time/Time';
-// import { PlaceContext } from '../../App';
+import { PlaceContext } from '../../App';
 
 const Booking = () => {
     const { Id } = useParams();
     const selectedPlace = FakeData.filter(place => parseInt(place.key) === parseInt(Id))
     const bgImage = selectedPlace[0].image
 
-    // const [place,setPlace] = useContext(PlaceContext);
+    const [place,setPlace] = useContext(PlaceContext);
 
-    // setPlace(Id);
+    setPlace(Id);
 
 
     return (
