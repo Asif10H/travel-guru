@@ -16,8 +16,9 @@ const GoogleMap = () => {
     const lattitude = placeArray[0].lat
     const longitude = placeArray[0].lng
     console.log(lattitude,longitude);
+   
+    
     return (
-      // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyDw0R0Hb_DiVfM0VgZLBr9ZwjowFwu8RSY' }}

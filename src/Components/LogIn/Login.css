@@ -1,23 +1,121 @@
-.form-card{
-    border:2px solid black;
-    padding:30px;
-    
-}
-button{
-    background-color: #F9A51A;
-    border-radius:10px;
-    border:2px solid #F9A51A;
-    margin-top:10px;
-    padding:5px;
-}
-.login-form{
-    border:1px solid black;
-    padding:50px;
-    border-radius:10px;
+.booking-login-form {
+    width: 570px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 40px;
+    padding:0px 20px 0px 20px;
 }
 
-.toggle{
-    color:blue;
-    text-decoration:underline;
+.booking-login-form input {
+    width: 460px;
+}
+
+.forget-password {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #F9A51A;
     cursor: pointer;
+}
+
+label {
+    font-family: Montserrat !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 22px;
+    color: #000000 !important;
+}
+
+.submit-btn {
+    height: 50px;
+    margin-top: 30px;
+    background: #F9A51A;
+    font-family: Montserrat;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+
+.login-page-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 36px;
+    margin-bottom: 0;
+}
+
+.login-page-inner {
+    margin: 0 55px;
+}
+
+.about-account {
+    font-family: Montserrat;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.continue-with-facebook, .continue-with-google {
+    
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #C7C7C7;
+    box-sizing: border-box;
+    border-radius: 57px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.continue-with-facebook {
+    
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 8px;
+}
+
+.continue-with-google {
+    
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 8px;
+}
+
+.continue-with-facebook p, .continue-with-google p {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.or {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.or p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
 }

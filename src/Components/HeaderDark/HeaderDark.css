@@ -6,3 +6,18 @@
     width:100px;
     filter:brightness(600%)
 }
+.login-submit-btn-header{
+    height: 50px;
+    top: 609px;
+    margin-top: 25px;
+    background: #F9A51A;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+    color: #000000;
+    border-radius: 5px;
+}

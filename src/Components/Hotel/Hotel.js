@@ -11,6 +11,7 @@ import GoogleMap from '../Map/GoogleMap';
 
 
 
+
 const Hotel = () => {
     const [place, setPlace] = useContext(PlaceContext);
 
@@ -60,8 +61,10 @@ const Hotel = () => {
                 </div>
                 <div className="col-6">
 
-              
                 <GoogleMap></GoogleMap>
+
+              
+                
 
                 </div>
             </div>

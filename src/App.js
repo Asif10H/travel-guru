@@ -13,6 +13,7 @@ import Booking from './Components/Booking/Booking';
 import Hotel from './Components/Hotel/Hotel';
 import Login from './Components/LogIn/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import GoogleMap from './Components/Map/GoogleMap';
 
 export const UserContext = createContext();
 
@@ -38,13 +39,16 @@ function App(props) {
             <Booking></Booking>
           </Route>
           <PrivateRoute path='/hotel'>
-            <Hotel></Hotel>
+          <Hotel></Hotel>
           </PrivateRoute>
           <Route path='/login'>
           <Login></Login>
           </Route>
           <Route exact path='/'>
             <Home></Home>
+          </Route>
+          <Route path='/map'>
+          <GoogleMap></GoogleMap>
           </Route>
           <Route path='*'>
             <NotFound></NotFound>

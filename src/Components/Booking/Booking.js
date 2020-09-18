@@ -39,7 +39,7 @@ const Booking = () => {
                             </Form.Group>
                             <Time></Time>
                             <Link to='/hotel'>
-                            <button  type="submit">
+                            <button className="booking-btn" type="submit">
                                 Start Booking
                             </button>
                             </Link>
