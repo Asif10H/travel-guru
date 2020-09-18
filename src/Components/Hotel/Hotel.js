@@ -6,8 +6,8 @@ import roomThree from '../../Image/roomThree.png'
 import HeaderLight from '../HeaderLight/HeaderLight';
 import { PlaceContext } from '../../App';
 import FakeData from '../FakeData/FakeData';
-import GoogleMap from '../Map/GoogleMap'
 import star from '../../Icon/star.png'
+import GoogleMap from '../Map/GoogleMap';
 
 
 
@@ -60,8 +60,8 @@ const Hotel = () => {
                 </div>
                 <div className="col-6">
 
-               <GoogleMap></GoogleMap>
-                
+              
+                <GoogleMap></GoogleMap>
 
                 </div>
             </div>

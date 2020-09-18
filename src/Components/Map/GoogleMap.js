@@ -21,13 +21,13 @@ const GoogleMap = () => {
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyDw0R0Hb_DiVfM0VgZLBr9ZwjowFwu8RSY' }}
-          defaultCenter={{lattitude,longitude}}
+          defaultCenter={{lat:parseInt(lattitude),lng:parseInt(longitude)}}
           defaultZoom={10}
         >
           <AnyReactComponent
-            lat={lattitude}
-            lng={longitude}
-            text="Here"
+          lat={parseInt(lattitude)}
+          lng={parseInt(longitude)}
+          text='here'
           />
         </GoogleMapReact>
       </div>
