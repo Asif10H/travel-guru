@@ -1,7 +1,5 @@
 # Travel-Guru
-[Website](https://sleepy-colden-54461c.netlify.app/)
-	---
-A website to book a travelling place at a specific date and time.
+[Website](https://sleepy-colden-54461c.netlify.app/)  A website to book a travelling place at a specific date and time.
 ## Features
 - User Authentication 
 - Book a travelling place at a specific date
